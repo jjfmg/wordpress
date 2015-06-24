@@ -20,6 +20,8 @@ ADD create_mysql_admin_user.sh /create_mysql_admin_user.sh
 ADD create_db.sh /create_db.sh
 RUN chmod +x /*.sh
 
+# Create volume
+VOLUME /app
 
 EXPOSE 80 3306
 CMD ["/run.sh"]
